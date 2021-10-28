@@ -1,0 +1,121 @@
+var lap =prompt("Selecciona una Accion ,Nombre del equipo,Codigo,Cantidad")
+
+
+switch(lap){
+   case "Nombre del equipo": 
+   registros=prompt(" ingresa el numero de equipos que vas a llevar");
+   
+   for(let i = 1; i <= registros; i++){
+       console.log(registros+ [i]);
+       
+       let NuevoRegistro = CrearRegistro();
+       console.log(NuevoRegistro);
+
+       alert("Se crearon los registros");
+
+}
+       break; 
+
+       case"Codigo":
+       var generateRandomString = (num) => {
+              var characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+              let result1= Math.random().toString(36).substring(1,num);       
+      
+              return result1; 
+          }
+      
+      console.log(generateRandomString(7));
+      alert("TU Codigo Es" + generateRandomString(7))
+
+break;
+
+    case "Cantidad":
+   var x_cantidad=prompt("Ingresa cuantas vas a ocupar");     
+   for(let i = 1; i <= cantidad; i++){
+       console.log(cantidad+ [i]);
+       let NuevoCantidad= CrearCantidad();
+       console.log(NuevoCantidad);
+
+       alert("Se crearon las Cantidades");
+}  break;
+ 
+
+}
+
+var Equipos_Disponibles=prompt("Que Equipo Desea Usar");
+var Almacen ={
+    "Nombres": "HP",
+    "Codigo" : "1234",
+    "Cantidad":"1"
+}
+var Almacen2={
+    "Nombres": "Sony",
+    "Codigo": "4567",
+    "Cantidad":"4"
+}
+var Almacen3={
+    "Nombre":"Lenovo",
+    "Codigo": "8907",
+    "Cantidad":"7"
+}
+var Almacen4={
+    "Nombre": "xioami",
+    "Codigo": "7890",
+    "Cantidad":"6"
+}
+var Almacen5={
+    "Nombre": "MAC",
+    "Codigo": "4534",
+    "Cantidad":"34"
+}
+var prestamos ={
+       "USUARIO": "Alamacen",
+       "USURIAO 2":"Almacen2",
+       "USUARIO 3": "Almacen3",
+        "USURIAO 4": "Alamcen4"
+   
+   }
+   console.log(Equipos_Disponibles,Almacen,Almacen2,Almacen3,Almacen4,Almacen5); 
+   alert("Los equipos en el almacen son"); 
+   
+function CrearRegistro(texto) 
+{
+       let  RegistrodeNombre=prompt("Ingresa el nombre");
+       let  RegistrodeCodigo=prompt("Ingresa el codigo,el codigo es la cantidad de palabras de la computadora");
+       let  RegistrodeCantidad=prompt("Ingresa la cantidad");
+
+       let Datos = {
+       Nombre: RegistrodeNombre,
+       Codigo: RegistrodeCodigo,
+       Cantidad: RegistrodeCantidad,       
+       }
+
+       return Datos; 
+
+       }
+
+
+function codigo(Texto)  
+{
+
+       let  RegistrodeCodigo=prompt("Ingresa el codigo");
+       let Codigo
+       ={
+
+       Codigo: RegistrodeCodigo,
+       }
+
+       return Codigo;
+
+       }
+
+
+       function cantidad(texto) {
+       var total=0;
+       var x1; 
+       var x1=parseInt(prompt("Cantidad de computadoras"));
+
+       var total = x1; 
+
+       console.log(total);
+       }
