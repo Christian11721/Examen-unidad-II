@@ -1,0 +1,93 @@
+var lap =prompt("Que desea hacer,Registros,Hacer un registro,")
+alert("Estos son los equipos");
+var Almacen ={
+    "Nombres": "HP",
+    "Codigo" : "2",
+    "Cantidad":"1"
+}
+var Almacen2={
+    "Nombres": "Sony",
+    "Codigo": "4",
+    "Cantidad":"4"
+}
+var Almacen3={
+    "Nombre":"Lenovo",
+    "Codigo": "5",
+    "Cantidad":"7"
+}
+var Almacen4={
+    "Nombre": "xioami",
+    "Codigo": "6",
+    "Cantidad":"6"
+}
+var Almacen5={
+    "Nombre": "Mac",
+    "Codigo": "3",
+    "Cantidad":"34"
+}
+alert("Los equipos en el almacen son"); 
+console.log(Almacen);
+console.log(Almacen2);
+console.log(Almacen3);
+console.log(Almacen4);
+console.log(Almacen5);
+
+var Equipos_Disponibles=prompt("Que Equipo Desea Usar");
+
+
+switch(lap){
+   case "Registros": 
+   registros=prompt(" ingresa el numero de equipos que vas a llevar");
+   
+   for(let i = 1; i <= registros; i++){
+       console.log(registros+ [i]);
+       
+       let NuevoRegistro = CrearRegistro();
+       console.log(NuevoRegistro);
+
+       alert("Se crearon los registros");
+
+}
+       break; 
+   
+function CrearRegistro(texto) 
+{
+       let  RegistrodeNombre=prompt("Ingresa el nombre");
+       let  RegistrodeCodigo=prompt("Ingresa el codigo de la computadora");
+       let  RegistrodeCantidad=prompt("Ingresa la cantidad");
+
+       let Datos = {
+       Nombre: RegistrodeNombre,
+       Codigo: RegistrodeCodigo,
+       Cantidad: RegistrodeCantidad,       
+       }
+
+       return Datos; 
+
+       }
+
+
+function codigo(Texto)  
+{
+
+       let  RegistrodeCodigo=prompt("Ingresa el codigo");
+       let Codigo
+       ={
+
+       Codigo: RegistrodeCodigo,
+       }
+
+       return Codigo;
+
+       }
+
+
+       function cantidad(texto) {
+       var total=0;
+       var x1; 
+       var x1=parseInt(prompt("Cantidad de computadoras"));
+
+       var total = x1; 
+
+       console.log(total);
+       }}
