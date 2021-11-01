@@ -1,0 +1,206 @@
+alert("Bienvenido")
+var lap =prompt("Que desea hacer,prestamo,cantidad,disponibilidad, inventario");
+var lap=prompt("Tiene algun prestamo ")
+switch(lap){
+case"prestamo":
+let apartar=prestamo();
+console.log("apartar");
+break;
+case"si":
+alert("No podemos prestarle un equipo ya que tiene un prestamo");     
+break;
+case"no"://Pide el informe de sus prestamos
+alert("Estos son los equipos") 
+
+
+ var Almacen ={
+    "Nombres": "Hp",
+    "Codigo" : "2",
+    "Cantidad":"1"
+}  
+var Almacen2={
+    "Nombres": "Sony",
+    "Codigo": "4",
+    "Cantidad":"4"
+}
+var Almacen3={
+    "Nombre":"Lenovo",
+    "Codigo": "5",
+    "Cantidad":"7"
+} 
+var Almacen4={
+    "Nombre": "xioami",
+    "Codigo": "6",
+    "Cantidad":"6"
+}
+var Almacen5={
+    "Nombre": "Mac",
+    "Codigo": "3",
+    "Cantidad":"34"
+} 
+console.log(Almacen);
+console.log(Almacen2);
+console.log(Almacen3);
+console.log(Almacen4);
+console.log(Almacen5);//Muestra los productos
+
+case"Registro":
+registros=prompt(" ingresa el numero de equipos que vas a llevar");
+   
+for(let i = 1; i <= registros; i++){
+    console.log(registros+ [i]);
+    
+    let NuevoRegistro = CrearRegistro();
+    console.log(NuevoRegistro);
+
+    alert("Se crearon los registros");
+    break;
+}
+
+
+
+function CrearRegistro(texto) 
+{
+       let  RegistrodeNombre=prompt("Ingresa tu nombre");
+       let  Equipos=prompt("Que Equipo Desea Usar");
+       let  RegistrodeCodigo=prompt("Ingresa el codigo de la computadora");
+       let Cantida =prompt("Ingresa cantidad");
+      
+
+
+       let Datos = { 
+       Nombre: RegistrodeNombre,
+       Compu : Equipos,
+       Codigo: RegistrodeCodigo,     
+       Cuantos : Cantida,
+        
+       }
+       
+           
+       
+       return Datos; 
+
+       }}//Crea el prestamo
+
+var lap =prompt("Que desea hacer,prestamo,cantidad,Equipos disponibles, inventario");
+var ap=prompt("Ver el inventario");
+switch (ap){
+    case"Inventario" :
+    break; 
+    case "si":
+    var inventario =["Nombre Hp","Codigo 2","Cantidad1"];
+    var inventario2=["Nombre Sony","Codigo 4","Cantidad 4"];
+    var inventario3=["Nombre Lenovo","Codigo 5","Cantidad 7"];
+    var inventario4=["Nombre xioami","Codigo 6","Cantidad 6"];
+    var inventario5=["Nombre Mac","Codigo 3","Cantidad 34"];
+    alert("En el almacen existe");
+    console.log(inventario);
+    console.log(inventario2);
+    console.log(inventario3);
+    console.log(inventario4);
+    console.log(inventario5);
+    break;  
+    case"no":
+    break; //Muestra el almacen
+}
+var lap =prompt("Que desea hacer,prestamo,cantidad, disponibilidad, inventario");
+       var ap=prompt("Ver disponibilidad"); 
+       switch (ap){
+           case"si" :
+        let disponibilidad=prompt("Ingrese num2,num4,num5,num6,num3"); 
+        let num2= "disponible";
+        let num4= "nodisponible";
+        let num5="Disponible";
+        let num6 ="No disponible";
+        let num3 ="Disponible"; 
+        if (num2 == "disponible" ) {
+            alert("Su equipo esta disponible");
+            break; 
+        }if (num4 =="nodisponible") {
+            alert("El equipo no esta disponible"); 
+            break;
+        }if (num5 =="Disponible") {
+            alert("Su equipo esta disponible");
+            break;
+        }if (num6 == "nodisponible") {
+            alert("El equipo no esta disponible"); 
+            break;
+        }if (num3 == "Disponible") {
+            alert("Su equipo esta disponible");
+            break; 
+        }//Muestra los equipos disponibles
+       }  
+       var Cantidad = prompt("Responda lo siguiente coloque 1");
+       for (let i = 0; i < Cantidad; i++) { 
+           var nombre = prompt("Tu nombre");
+           var producto = prompt("Que producto llevas");
+           var codigo = prompt("Que codigo es")
+           var cantidad =prompt("Cuantos productos")
+           var datosAlmacenados = [];
+           var datos = {
+               nombre: nombre,
+               producto : producto,
+               codigo : codigo,
+               cantidad : cantidad,
+
+              
+           }
+           console.log(datos);
+       }
+       datosAlmacenados.push(datos);
+       alert("Para buscar nombre 1,producto 2, codigo 3, cantidad 4");
+       var opc = prompt(" Presiona 1,2,3,4"); 
+
+       switch (opc) {
+           case "1":
+               tuNombre();
+
+               break;
+           case "2":
+               tuProducto();
+
+               break;
+           case "3":
+               tuCodigo();
+
+               break;
+           case"4":
+               tuCantidad();
+       }
+       function tuNombre() {
+           var busqueda = prompt("Que nombre busca");
+           for (let i = 0; i < datosAlmacenados.length; i++) {
+               if (datosAlmacenados[i].nombre == busqueda) {
+                   console.log(datosAlmacenados[i]);
+               }
+           }
+           alert("Este es el resultado");
+
+       }
+       function tuProducto() {
+           var busqueda1 = prompt("Que producto busca");
+           for (let i = 0; i < datosAlmacenados.length; i++) {
+               if (datosAlmacenados[i].producto == busqueda1) {
+                   console.log(datosAlmacenados[i]);
+               }
+           }
+           alert("Este es el resultado");
+       }
+       function tuCodigo() {
+           var busqueda2 = prompt("Que codigo bsuca");
+           for (let i = 0; i < datosAlmacenados.length; i++) {
+               if (datosAlmacenados[i].codigo == busqueda2) {
+                   console.log(datosAlmacenados[i]);
+               }
+           }
+           alert("Este es el resultado ");
+       }
+       function tuCantidad() {
+           var busqueda2 = prompt("Que cantidad busca");
+           for (let i = 0; i < datosAlmacenados.length; i++) {
+               if (datosAlmacenados[i].cantidad == busqueda2) {
+                   console.log(datosAlmacenados[i]);
+               }
+           }
+           alert("Este es el resultado ");
+       }//Muestra la busqueda de un usuario 
